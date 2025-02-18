@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TodayViewController: UIViewController,UITableViewDataSource {
+class TodayViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var table: UITableView!
     
@@ -29,6 +29,7 @@ class TodayViewController: UIViewController,UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         table.dataSource = self
+        table.delegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -40,12 +41,16 @@ class TodayViewController: UIViewController,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellData = data[indexPath.row]
         let cell = table.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TodayDataTableViewCell
-        cell.topic.text = cellData.topic
-        cell.header.text = cellData.header
+        cell.topic.text = cellData.header
+        cell.header.text = cellData.topic
         cell.subHeader.text = cellData.subHeader
         cell.date.text = cellData.date
         return cell
     }
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//            return 80
+//        }
 
     /*
     // MARK: - Navigation
