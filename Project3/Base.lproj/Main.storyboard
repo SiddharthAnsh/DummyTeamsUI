@@ -96,14 +96,14 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contoso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8y-vh-Svi">
-                                <rect key="frame" x="10" y="59" width="133" height="21"/>
+                                <rect key="frame" x="30" y="59" width="113" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbM-fo-ucX">
                                 <rect key="frame" x="10" y="100" width="193" height="39"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Today">
                                     <color key="titleColor" systemColor="labelColor"/>
@@ -122,7 +122,7 @@
                             <constraint firstItem="v5m-bN-pnK" firstAttribute="trailing" secondItem="d8y-vh-Svi" secondAttribute="trailing" constant="250" id="QB5-hR-eRW"/>
                             <constraint firstItem="wbM-fo-ucX" firstAttribute="leading" secondItem="v5m-bN-pnK" secondAttribute="leading" constant="10" id="gqF-WG-uAF"/>
                             <constraint firstItem="XZJ-c1-RRl" firstAttribute="top" secondItem="d8y-vh-Svi" secondAttribute="bottom" constant="79" id="oCr-Q5-AEp"/>
-                            <constraint firstItem="d8y-vh-Svi" firstAttribute="leading" secondItem="v5m-bN-pnK" secondAttribute="leading" constant="10" id="vPw-Cu-AQD"/>
+                            <constraint firstItem="d8y-vh-Svi" firstAttribute="leading" secondItem="v5m-bN-pnK" secondAttribute="leading" constant="30" id="vPw-Cu-AQD"/>
                             <constraint firstItem="wbM-fo-ucX" firstAttribute="top" secondItem="d8y-vh-Svi" secondAttribute="bottom" constant="20" id="vxa-oA-Jfc"/>
                             <constraint firstItem="d8y-vh-Svi" firstAttribute="top" secondItem="v5m-bN-pnK" secondAttribute="top" id="wPb-il-VR1"/>
                         </constraints>
