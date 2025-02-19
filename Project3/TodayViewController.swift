@@ -11,6 +11,19 @@ class TodayViewController: UIViewController,UITableViewDataSource, UITableViewDe
 
     @IBOutlet weak var table: UITableView!
     
+    @IBOutlet weak var incidentsView: UIView!
+    
+    var valueVariable : Bool = false
+    @IBAction func disableTodayButton(_ sender: Any) {
+        valueVariable = true
+        table.isHidden = false
+        incidentsView.isHidden = true
+    }
+    @IBAction func tapIncidentsButton(_ sender: Any) {
+        table.isHidden = true
+        incidentsView.isHidden = false
+    }
+    
     struct TodayData {
         let topic : String
         let header : String
@@ -30,6 +43,8 @@ class TodayViewController: UIViewController,UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
         table.dataSource = self
         table.delegate = self
+        incidentsView.isHidden = true
+        
 
         // Do any additional setup after loading the view.
     }
@@ -48,9 +63,9 @@ class TodayViewController: UIViewController,UITableViewDataSource, UITableViewDe
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//            return 80
-//        }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+            return 150
+        }
 
     /*
     // MARK: - Navigation
