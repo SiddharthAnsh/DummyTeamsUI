@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LoadingPageVCTableViewCell" rowHeight="159" id="KGk-i7-Jjw" customClass="LoadingPageVCTableViewCell" customModule="Project3" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="406" height="159"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="406" height="159"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jt4-xA-afJ">
+                        <rect key="frame" x="10" y="10" width="386" height="139"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MdO-x3-0Ge">
+                                <rect key="frame" x="10" y="0.0" width="76" height="19"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good morning Jeff" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCp-nj-bOc">
+                                <rect key="frame" x="10" y="24" width="226" height="25"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your shift will start in 15 minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4c-n9-c8L">
+                                <rect key="frame" x="10" y="54" width="276" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8:30 AM - 4:30 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEd-wF-Nge">
+                                <rect key="frame" x="10" y="79" width="176" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfh-hZ-fn8">
+                                <rect key="frame" x="10" y="108" width="126" height="26"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Clock in"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gEd-wF-Nge" firstAttribute="leading" secondItem="jt4-xA-afJ" secondAttribute="leading" constant="10" id="1fv-2D-jb3"/>
+                            <constraint firstAttribute="trailing" secondItem="FCp-nj-bOc" secondAttribute="trailing" constant="150" id="1lY-34-fYf"/>
+                            <constraint firstItem="MdO-x3-0Ge" firstAttribute="top" secondItem="jt4-xA-afJ" secondAttribute="top" id="83x-zR-APj"/>
+                            <constraint firstAttribute="bottom" secondItem="gEd-wF-Nge" secondAttribute="bottom" constant="36" id="9NI-oQ-Tq7"/>
+                            <constraint firstItem="a4c-n9-c8L" firstAttribute="leading" secondItem="jt4-xA-afJ" secondAttribute="leading" constant="10" id="9v4-pP-KrH"/>
+                            <constraint firstItem="a4c-n9-c8L" firstAttribute="top" secondItem="FCp-nj-bOc" secondAttribute="bottom" constant="5" id="BYX-B5-wQK"/>
+                            <constraint firstAttribute="trailing" secondItem="zfh-hZ-fn8" secondAttribute="trailing" constant="250" id="Er1-kl-6Bp"/>
+                            <constraint firstItem="FCp-nj-bOc" firstAttribute="top" secondItem="MdO-x3-0Ge" secondAttribute="bottom" constant="5" id="G5v-yT-Wsm"/>
+                            <constraint firstItem="FCp-nj-bOc" firstAttribute="leading" secondItem="jt4-xA-afJ" secondAttribute="leading" constant="10" id="GWu-Js-r2s"/>
+                            <constraint firstItem="zfh-hZ-fn8" firstAttribute="leading" secondItem="jt4-xA-afJ" secondAttribute="leading" constant="10" id="HUv-D4-Asp"/>
+                            <constraint firstAttribute="trailing" secondItem="a4c-n9-c8L" secondAttribute="trailing" constant="100" id="KeN-qq-2Wh"/>
+                            <constraint firstAttribute="trailing" secondItem="MdO-x3-0Ge" secondAttribute="trailing" constant="300" id="Yfn-F0-vq3"/>
+                            <constraint firstItem="gEd-wF-Nge" firstAttribute="top" secondItem="a4c-n9-c8L" secondAttribute="bottom" constant="5" id="fMb-Wx-5qs"/>
+                            <constraint firstAttribute="bottom" secondItem="zfh-hZ-fn8" secondAttribute="bottom" constant="5" id="jJi-ts-i0s"/>
+                            <constraint firstItem="zfh-hZ-fn8" firstAttribute="top" secondItem="gEd-wF-Nge" secondAttribute="bottom" constant="5" id="jb3-Ht-vQI"/>
+                            <constraint firstItem="MdO-x3-0Ge" firstAttribute="leading" secondItem="jt4-xA-afJ" secondAttribute="leading" constant="10" id="kDs-82-oJd"/>
+                            <constraint firstAttribute="trailing" secondItem="gEd-wF-Nge" secondAttribute="trailing" constant="200" id="qr5-PO-e9x"/>
+                            <constraint firstAttribute="bottom" secondItem="a4c-n9-c8L" secondAttribute="bottom" constant="65" id="rjs-mR-iwO"/>
+                            <constraint firstAttribute="bottom" secondItem="MdO-x3-0Ge" secondAttribute="bottom" constant="120" id="sdo-7c-aWo"/>
+                            <constraint firstAttribute="bottom" secondItem="FCp-nj-bOc" secondAttribute="bottom" constant="90" id="spL-b9-eTq"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="jt4-xA-afJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="CVM-cr-kOq"/>
+                    <constraint firstAttribute="bottom" secondItem="jt4-xA-afJ" secondAttribute="bottom" constant="10" id="Dc5-b1-iWd"/>
+                    <constraint firstAttribute="trailing" secondItem="jt4-xA-afJ" secondAttribute="trailing" constant="10" id="FMD-cL-QOj"/>
+                    <constraint firstItem="jt4-xA-afJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="VAH-Wh-LBw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="140.45801526717557" y="27.816901408450704"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

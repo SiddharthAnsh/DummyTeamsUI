@@ -9,13 +9,25 @@ import UIKit
 
 class TeamsHomePageVC: UIViewController {
 
-    @IBAction func moveToContoso(_ sender: UIButton) {
-        performSegue(withIdentifier: "TeamToContoso", sender: nil)
+    
+    @IBAction func tapToContoso(_ sender: Any) {
+        guard let screenName = UIStoryboard(name: "Main", bundle: nil)
+            .instantiateViewController(withIdentifier: "LoadingPageVC") as? LoadingPageVC
+        else {
+            print("Could not instantiate WelcomeToContosoVC")
+            return
+        }
+                
+        if let navController = self.navigationController {
+            navController.pushViewController(screenName, animated: true)
+        } else {
+            screenName.modalPresentationStyle = .fullScreen
+            present(screenName, animated: true)
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
 

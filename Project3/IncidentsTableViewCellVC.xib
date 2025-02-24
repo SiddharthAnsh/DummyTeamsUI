@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="IncidentsTableViewCellVC" rowHeight="136" id="KGk-i7-Jjw" customClass="IncidentsTableViewCellVC" customModule="Project3" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="136"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="136"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PdC-Wu-TFr">
+                        <rect key="frame" x="10" y="10" width="380" height="116"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Incidents" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCu-o9-Tld">
+                                <rect key="frame" x="10" y="10" width="270" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No new incidents reported by you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glA-ea-nVY">
+                                <rect key="frame" x="10" y="41" width="270" height="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9SE-e9-VIe">
+                                <rect key="frame" x="10" y="76" width="210" height="33"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Report new incident"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uhl-gA-nvQ">
+                                <rect key="frame" x="230" y="76" width="140" height="33"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="View incidents"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CCu-o9-Tld" firstAttribute="leading" secondItem="PdC-Wu-TFr" secondAttribute="leading" constant="10" id="5Zg-nZ-Rsc"/>
+                            <constraint firstItem="9SE-e9-VIe" firstAttribute="leading" secondItem="PdC-Wu-TFr" secondAttribute="leading" constant="10" id="6x1-fN-vRU"/>
+                            <constraint firstItem="9SE-e9-VIe" firstAttribute="top" secondItem="glA-ea-nVY" secondAttribute="bottom" constant="10" id="DRz-Gr-8bW"/>
+                            <constraint firstItem="glA-ea-nVY" firstAttribute="top" secondItem="CCu-o9-Tld" secondAttribute="bottom" constant="10" id="ErE-Bj-03i"/>
+                            <constraint firstAttribute="bottom" secondItem="Uhl-gA-nvQ" secondAttribute="bottom" constant="7" id="IQW-dR-cY5"/>
+                            <constraint firstAttribute="bottom" secondItem="CCu-o9-Tld" secondAttribute="bottom" constant="85" id="Mmb-pU-2hF"/>
+                            <constraint firstAttribute="bottom" secondItem="9SE-e9-VIe" secondAttribute="bottom" constant="7" id="MvL-G7-2zQ"/>
+                            <constraint firstAttribute="bottom" secondItem="glA-ea-nVY" secondAttribute="bottom" constant="50" id="NmY-jq-dCN"/>
+                            <constraint firstItem="glA-ea-nVY" firstAttribute="leading" secondItem="PdC-Wu-TFr" secondAttribute="leading" constant="10" id="XKp-Lr-efA"/>
+                            <constraint firstAttribute="trailing" secondItem="glA-ea-nVY" secondAttribute="trailing" constant="100" id="ZOm-N0-8Br"/>
+                            <constraint firstAttribute="trailing" secondItem="Uhl-gA-nvQ" secondAttribute="trailing" constant="10" id="cL7-mD-0V9"/>
+                            <constraint firstAttribute="trailing" secondItem="CCu-o9-Tld" secondAttribute="trailing" constant="100" id="eUx-jW-ylc"/>
+                            <constraint firstItem="Uhl-gA-nvQ" firstAttribute="leading" secondItem="9SE-e9-VIe" secondAttribute="trailing" constant="10" id="elN-tF-EAr"/>
+                            <constraint firstAttribute="trailing" secondItem="9SE-e9-VIe" secondAttribute="trailing" constant="160" id="h93-6n-vo3"/>
+                            <constraint firstItem="CCu-o9-Tld" firstAttribute="top" secondItem="PdC-Wu-TFr" secondAttribute="top" constant="10" id="ljG-wg-cpa"/>
+                            <constraint firstItem="Uhl-gA-nvQ" firstAttribute="top" secondItem="glA-ea-nVY" secondAttribute="bottom" constant="10" id="sgH-jO-s24"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="PdC-Wu-TFr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="4fO-UL-UWa"/>
+                    <constraint firstItem="PdC-Wu-TFr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="gBx-vU-euS"/>
+                    <constraint firstAttribute="bottom" secondItem="PdC-Wu-TFr" secondAttribute="bottom" constant="10" id="hbV-eu-wkI"/>
+                    <constraint firstAttribute="trailing" secondItem="PdC-Wu-TFr" secondAttribute="trailing" constant="10" id="iXF-pl-AGd"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="116.03053435114504" y="25.35211267605634"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

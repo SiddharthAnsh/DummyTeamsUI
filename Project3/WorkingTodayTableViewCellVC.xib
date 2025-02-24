@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WorkingTodayTableViewCellVC" rowHeight="147" id="KGk-i7-Jjw" customClass="WorkingTodayTableViewCellVC" customModule="Project3" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="147"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="147"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Gj-PB-4mZ">
+                        <rect key="frame" x="10" y="10" width="300" height="127"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Also working today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="peV-m7-gHt">
+                                <rect key="frame" x="10" y="10" width="280" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screenshot 2025-02-20 at 2.15.38 PM" translatesAutoresizingMaskIntoConstraints="NO" id="Qit-Re-7rW">
+                                <rect key="frame" x="10" y="37" width="140" height="40"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8w-OX-7N2">
+                                <rect key="frame" x="10" y="87" width="100" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="View All"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="A8w-OX-7N2" secondAttribute="trailing" constant="190" id="0sk-dv-0a0"/>
+                            <constraint firstAttribute="trailing" secondItem="peV-m7-gHt" secondAttribute="trailing" constant="10" id="App-sa-n8r"/>
+                            <constraint firstItem="peV-m7-gHt" firstAttribute="leading" secondItem="4Gj-PB-4mZ" secondAttribute="leading" constant="10" id="KzS-jn-Gfu"/>
+                            <constraint firstItem="Qit-Re-7rW" firstAttribute="leading" secondItem="4Gj-PB-4mZ" secondAttribute="leading" constant="10" id="XYA-X6-nGc"/>
+                            <constraint firstAttribute="bottom" secondItem="Qit-Re-7rW" secondAttribute="bottom" constant="50" id="dcJ-ZI-ht4"/>
+                            <constraint firstItem="A8w-OX-7N2" firstAttribute="leading" secondItem="4Gj-PB-4mZ" secondAttribute="leading" constant="10" id="dxM-DT-6am"/>
+                            <constraint firstItem="Qit-Re-7rW" firstAttribute="top" secondItem="peV-m7-gHt" secondAttribute="bottom" constant="10" id="gV7-Rk-X2o"/>
+                            <constraint firstItem="peV-m7-gHt" firstAttribute="top" secondItem="4Gj-PB-4mZ" secondAttribute="top" constant="10" id="n7F-KG-XG7"/>
+                            <constraint firstItem="A8w-OX-7N2" firstAttribute="top" secondItem="Qit-Re-7rW" secondAttribute="bottom" constant="10" id="yW0-fZ-xMr"/>
+                            <constraint firstAttribute="bottom" secondItem="peV-m7-gHt" secondAttribute="bottom" constant="100" id="zNz-GU-HcS"/>
+                            <constraint firstAttribute="trailing" secondItem="Qit-Re-7rW" secondAttribute="trailing" constant="150" id="zx7-Ik-MbJ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="4Gj-PB-4mZ" secondAttribute="bottom" constant="10" id="5N2-2E-FME"/>
+                    <constraint firstItem="4Gj-PB-4mZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="CZQ-Px-MCK"/>
+                    <constraint firstAttribute="trailing" secondItem="4Gj-PB-4mZ" secondAttribute="trailing" constant="10" id="Nyx-Gi-pZe"/>
+                    <constraint firstItem="4Gj-PB-4mZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="eLg-Hz-Tsy"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="129.7709923664122" y="23.591549295774648"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Screenshot 2025-02-20 at 2.15.38 PM" width="764" height="162"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
