@@ -46,12 +46,6 @@ class SidebarViewController: UIViewController {
         return label
     }()
     
-    private let menuStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .vertical
-        stackView.spacing = 16
-        return stackView
-    }()
     
     private let signOutButton: UIButton = {
         let button = UIButton()
@@ -59,6 +53,22 @@ class SidebarViewController: UIViewController {
         button.setTitleColor(.purple, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         return button
+    }()
+    
+    private let signOutEmailLabel: UILabel = {
+        let label = UILabel()
+        label.text = "karin.blair@northwindtrade.com"
+        label.font = UIFont.systemFont(ofSize: 12)
+        label.textColor = .gray
+        return label
+    }()
+    
+    private let signOutImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "Color") // Replace with actual image
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        return imageView
     }()
     
     private var sidebarLeadingConstraint: NSLayoutConstraint!
@@ -95,22 +105,33 @@ class SidebarViewController: UIViewController {
         ])
         
         // Profile Section
-        let profileStackView = UIStackView(arrangedSubviews: [profileImageView, nameLabel, jobTitleLabel])
-        profileStackView.axis = .vertical
+        
+        let textStackView = UIStackView(arrangedSubviews: [nameLabel, jobTitleLabel])
+        textStackView.axis = .vertical
+        textStackView.spacing = 4
+        textStackView.alignment = .leading
+            
+            // Create a horizontal stack with image on the left, text on the right
+        let profileStackView = UIStackView(arrangedSubviews: [profileImageView, textStackView])
+        profileStackView.axis = .horizontal
+        profileStackView.spacing = 12
         profileStackView.alignment = .center
-        profileStackView.spacing = 8
-        
-        sidebarView.addSubview(profileStackView)
         profileStackView.translatesAutoresizingMaskIntoConstraints = false
-        
+            
+            // Add profileStackView to sidebarView
+        sidebarView.addSubview(profileStackView)
+            
+            // Apply constraints
         NSLayoutConstraint.activate([
             profileStackView.topAnchor.constraint(equalTo: sidebarView.topAnchor, constant: 40),
-            profileStackView.centerXAnchor.constraint(equalTo: sidebarView.centerXAnchor)
+            profileStackView.leadingAnchor.constraint(equalTo: sidebarView.leadingAnchor, constant: 20),
+            profileStackView.trailingAnchor.constraint(equalTo: sidebarView.trailingAnchor, constant: -20),
+
+            profileImageView.widthAnchor.constraint(equalToConstant: 50),
+            profileImageView.heightAnchor.constraint(equalToConstant: 50)
         ])
         
-        profileImageView.translatesAutoresizingMaskIntoConstraints = false
-        profileImageView.widthAnchor.constraint(equalToConstant: 70).isActive = true
-        profileImageView.heightAnchor.constraint(equalToConstant: 70).isActive = true
+        sidebarView.addSubview(profileStackView)
         
         // Menu Items
         sidebarView.addSubview(menuStackView)
@@ -122,15 +143,40 @@ class SidebarViewController: UIViewController {
             menuStackView.trailingAnchor.constraint(equalTo: sidebarView.trailingAnchor, constant: -20)
         ])
         
+        
+        let signOutTextStackView = UIStackView(arrangedSubviews: [signOutButton, signOutEmailLabel])
+        signOutTextStackView.axis = .vertical
+        signOutTextStackView.spacing = 4
+        signOutTextStackView.alignment = .leading
+        
+        let signOutStackView = UIStackView(arrangedSubviews: [signOutImageView, signOutTextStackView])
+        signOutStackView.axis = .horizontal
+        signOutStackView.spacing = 12
+        signOutStackView.alignment = .center
+        signOutStackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        
+        
         // Sign Out Button
-        sidebarView.addSubview(signOutButton)
-        signOutButton.`translatesAutoresizingMaskIntoConstraints` = false
+        sidebarView.addSubview(signOutStackView)
+        signOutStackView.`translatesAutoresizingMaskIntoConstraints` = false
         
         NSLayoutConstraint.activate([
-            signOutButton.bottomAnchor.constraint(equalTo: sidebarView.bottomAnchor, constant: -40),
-            signOutButton.leadingAnchor.constraint(equalTo: sidebarView.leadingAnchor, constant: 20)
+            signOutImageView.widthAnchor.constraint(equalToConstant: 15),  // Adjust width
+            signOutImageView.heightAnchor.constraint(equalToConstant: 15),
+                                                         
+            signOutStackView.bottomAnchor.constraint(equalTo: sidebarView.bottomAnchor, constant: -40),
+            signOutStackView.leadingAnchor.constraint(equalTo: sidebarView.leadingAnchor, constant: 20)
         ])
     }
+    
+    private let menuStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.spacing = 16 // space between two cell
+        stackView.alignment = .fill
+        return stackView
+    }()
     
     private func setupMenuItems() {
         let menuItems = [
@@ -141,13 +187,22 @@ class SidebarViewController: UIViewController {
             ("What's new", "lightbulb")
         ]
         
-        for (title, systemImage) in menuItems {
-            let menuItem = createMenuItem(title: title, iconName: systemImage)
+        for (index, item) in menuItems.enumerated() {
+            let menuItem = createMenuItem(title: item.0, iconName: item.1)
             menuStackView.addArrangedSubview(menuItem)
+            
+            if index != menuItems.count - 1 { // add space to all cell except last cell
+                let spacer = UIView()
+                spacer.heightAnchor.constraint(equalToConstant: 12).isActive = true
+                menuStackView.addArrangedSubview(spacer)
+            }
         }
     }
+
     
     private func createMenuItem(title: String, iconName: String) -> UIView {
+        let container = UIView() // Parent view for spacing
+        
         let view = UIView()
         
         let imageView = UIImageView(image: UIImage(systemName: iconName))
@@ -173,7 +228,17 @@ class SidebarViewController: UIViewController {
             label.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
         
-        return view
+        container.addSubview(view)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            view.topAnchor.constraint(equalTo: container.topAnchor),
+            view.leadingAnchor.constraint(equalTo: container.leadingAnchor),
+            view.trailingAnchor.constraint(equalTo: container.trailingAnchor),
+            view.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: -12) // Adds space below
+        ])
+        
+        return container
     }
     
     private func addGestureRecognizers() {
@@ -181,9 +246,6 @@ class SidebarViewController: UIViewController {
         view.addGestureRecognizer(tapGesture)
     }
     
-//    @objc private func dismissSidebar() {
-//        toggleSidebar(show: false)
-//    }
     
     func toggleSidebar(show: Bool) {
         sidebarLeadingConstraint.constant = show ? 0 : -sidebarWidth
